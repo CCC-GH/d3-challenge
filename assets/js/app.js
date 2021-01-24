@@ -124,17 +124,17 @@
      }
      toolTip = d3.tip()
          .attr('class', 'd3-tip')
-         //.offset([40, -60])
+         .offset([40, -60])
          .html(function(d) {
-             return (`<strong>${d.state}<br>${xlabel} ${d[chosenXAxis]}<br>${ylabel} ${d[chosenYAxis]}<\strong>`);
+             return (`${d.state}<br>${xlabel} ${d[chosenXAxis]}<br>${ylabel} ${d[chosenYAxis]}`);
          });
      circlesGroup.call(toolTip);
 
-     circlesGroup.on('mouseover', function(data, index) {
-             toolTip.show(data);
+     circlesGroup.on('mouseover', function(data) {
+             toolTip.show(data, this)
          })
          // onmouseout event
-         .on('mouseout', function(data, index) {
+         .on('mouseout', function(data) {
              toolTip.hide(data);
          });
      return circlesGroup;

@@ -1,6 +1,6 @@
 # HW16-D3 Homework - Data Journalism and D3
 
-[GitHub Hosted Page](https://ccc-gh.github.io/d3-challenge/)
+## [GitHub Hosted Page](https://ccc-gh.github.io/d3-challenge/)
 
 ![d3 chart](Images/d3_chart_small.PNG)
 ## Background

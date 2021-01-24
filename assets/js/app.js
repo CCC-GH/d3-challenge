@@ -86,7 +86,6 @@
      return circlesGroup;
  }
 
-
  // function used for updating Circle Text group with a transition to
  // new circles
  function renderXCircleText(textCircles, newXScale, chosenXAxis) {
@@ -125,13 +124,13 @@
      }
      toolTip = d3.tip()
          .attr('class', 'd3-tip')
-         .offset([40, -60])
+         //.offset([40, -60])
          .html(function(d) {
              return (`<strong>${d.state}<br>${xlabel} ${d[chosenXAxis]}<br>${ylabel} ${d[chosenYAxis]}<\strong>`);
          });
      circlesGroup.call(toolTip);
 
-     circlesGroup.on('mouseover', function(data) {
+     circlesGroup.on('mouseover', function(data, index) {
              toolTip.show(data);
          })
          // onmouseout event
